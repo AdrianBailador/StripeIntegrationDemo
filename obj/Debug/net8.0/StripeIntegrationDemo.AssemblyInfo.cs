@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StripeIntegrationDemo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dfb84af620ee75d5b11101b21b2a73d83df5861d")]
 [assembly: System.Reflection.AssemblyProductAttribute("StripeIntegrationDemo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StripeIntegrationDemo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
