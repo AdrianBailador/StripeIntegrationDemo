@@ -1,5 +1,5 @@
 using Microsoft.Extensions.Options;
-using StripeIntegrationDemo.Models; // Asegúrate de agregar esta línea
+using StripeIntegrationDemo.Models;
 using Stripe;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,17 +7,15 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-// Configurar StripeSettings usando los valores de appsettings.json
+// Configure StripeSettings using values from appsettings.json
 builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 
-// Construir la aplicación
 var app = builder.Build();
 
-// Configurar el pipeline de solicitudes HTTP.
+// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -32,7 +30,7 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-// Configurar la clave secreta de Stripe
+// Configure Stripe secret key
 Stripe.StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe")["SecretKey"];
 
 app.Run();

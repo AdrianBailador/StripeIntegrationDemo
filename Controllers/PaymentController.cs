@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Stripe;
 using Stripe.Checkout;
-using StripeIntegrationDemo.Models; // Ensure this line is added
+using StripeIntegrationDemo.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -34,7 +34,7 @@ public class PaymentController : Controller
                 {
                     PriceData = new SessionLineItemPriceDataOptions
                     {
-                        UnitAmount = 2000, // Amount in cents
+                        UnitAmount = 2000,
                         Currency = "eur",
                         ProductData = new SessionLineItemPriceDataProductDataOptions
                         {
@@ -49,10 +49,19 @@ public class PaymentController : Controller
             CancelUrl = Url.Action("Cancel", "Payment", null, Request.Scheme),
         };
 
-        var service = new SessionService();
-        Session session = await service.CreateAsync(options);
+        try
+        {
+            var service = new SessionService();
+            Session session = await service.CreateAsync(options);
 
-        return Json(new { id = session.Id });
+            return Json(new { id = session.Id });
+        }
+        catch (StripeException e)
+        {
+            // Log the error and return a bad request response
+            // You can use a logging library like Serilog or NLog for better logging
+            return BadRequest(new { error = e.Message });
+        }
     }
 
     public IActionResult Success()
