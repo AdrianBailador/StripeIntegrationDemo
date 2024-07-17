@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "OLLdWJqr81J6W2/oD3Eb98h/PaHXq42A7/N7UtzuB49Vc70FsuE6hhIOvrI+F7EgEBtcB/yyc0VJKY795yz01Q==",
+  "success": true,
+  "projectFilePath": "/Users/adrianbailador/Desktop/Projects Adri/StripeIntegrationDemo/StripeIntegrationDemo.csproj",
+  "expectedPackageFiles": [
+    "/Users/adrianbailador/.nuget/packages/microsoft.win32.systemevents/6.0.0/microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "/Users/adrianbailador/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512",
+    "/Users/adrianbailador/.nuget/packages/stripe.net/45.3.0/stripe.net.45.3.0.nupkg.sha512",
+    "/Users/adrianbailador/.nuget/packages/system.configuration.configurationmanager/6.0.0/system.configuration.configurationmanager.6.0.0.nupkg.sha512",
+    "/Users/adrianbailador/.nuget/packages/system.drawing.common/6.0.0/system.drawing.common.6.0.0.nupkg.sha512",
+    "/Users/adrianbailador/.nuget/packages/system.security.accesscontrol/6.0.0/system.security.accesscontrol.6.0.0.nupkg.sha512",
+    "/Users/adrianbailador/.nuget/packages/system.security.cryptography.protecteddata/6.0.0/system.security.cryptography.protecteddata.6.0.0.nupkg.sha512",
+    "/Users/adrianbailador/.nuget/packages/system.security.permissions/6.0.0/system.security.permissions.6.0.0.nupkg.sha512",
+    "/Users/adrianbailador/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
